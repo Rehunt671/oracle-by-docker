@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  db:
+    image: oracle-21
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    environment:
+      - ORACLE_PWD=secret
+      - ORACLE_CHARACTERSET=TH8TISASCII
+    ports:
+      - 1521:1521
+
+volumes:
+  oracle_data:
+    driver: local
