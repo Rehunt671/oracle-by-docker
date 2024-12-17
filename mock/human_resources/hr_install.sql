@@ -90,7 +90,7 @@ rem =======================================================
 rem Accept and verify schema password
 rem =======================================================
 
-ACCEPT pass PROMPT 'Enter a password for the user HR: ' HIDE
+ACCEPT pass PROMPT 'Enter a password for the user HR: ' HIDE DEFAULT 'password'
 
 BEGIN
    IF '&pass' IS NULL THEN

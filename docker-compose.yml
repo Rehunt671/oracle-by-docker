@@ -1,9 +1,9 @@
-version: "3.8"
 services:
   db:
     image: oracle-21
     volumes:
       - oracle_data:/opt/oracle/oradata
+      - ./mock:/run/mock
     environment:
       - ORACLE_PWD=secret
       - ORACLE_CHARACTERSET=TH8TISASCII
