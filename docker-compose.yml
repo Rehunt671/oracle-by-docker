@@ -1,6 +1,7 @@
 services:
   db:
     image: oracle-21
+    container_name: oracle21
     volumes:
       - oracle_data:/opt/oracle/oradata
       - ./mock:/run/mock
